@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Welcome Screen -->
+  <div id="welcome-screen" class="screen">
+    <h1>Best Manager</h1>
+    <h2>Welcome</h2>
+    <p>You are the best!!</p>
+    <div class="loading-bar"></div>
+  </div>
+
+  <!-- Stock and Sales Entry Screen -->
+  <div id="screen1" class="screen">
+    <h2>Stock and Sales Entry</h2>
+    <form id="stock-entry-form">
+      <input type="text" id="item" placeholder="Item" required>
+      <input type="number" id="quantity" placeholder="Quantity" required>
+      <input type="number" id="price" placeholder="Price" required>
+      <button type="submit">Add Stock</button>
+    </form>
+    <form id="sales-entry-form">
+      <input type="text" id="sale-item" placeholder="Sale Item" required>
+      <input type="number" id="sale-quantity" placeholder="Sale Quantity" required>
+      <button type="submit">Record Sale</button>
+    </form>
+    <div class="bottom-buttons">
+      <button id="toScreen2">Current Stock</button>
+      <button id="toScreen3">Sales Report</button>
+    </div>
+  </div>
+
+  <!-- Current Stock Screen -->
+  <div id="screen2" class="screen">
+    <h2>Current Stock</h2>
+    <div id="stock-output"></div>
+    <div class="bottom-buttons">
+      <button id="backToScreen1">Back to Entry</button>
+      <button id="refresh-stock">Refresh Stock</button>
+    </div>
+  </div>
+
+  <!-- Sales Report Screen -->
+  <div id="screen3" class="screen">
+    <h2>Sales Report</h2>
+    <div id="report-output"></div>
+    <div class="bottom-buttons">
+      <button id="backToScreen2">Back to Stock</button>
+      <button id="generate-report">Generate Report</button>
+      <button id="refresh-report">Refresh Report</button>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
